@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { NavLink } from "react-router"
-import Logo from "../assets/shared/logo.svg"
-import MobileMenu from "../assets/shared/icon-hamburger.svg"
-import Close from "../assets/shared/icon-close.svg"
 
 const links = [
     { id: 1, number: '00', name: "Home", href: "/" },
@@ -31,14 +28,14 @@ export default function Navbar() {
     return (
         <nav className="flex flex-row items-center justify-between py-6 pl-10 lg:py-8 lg:pl-12 pr-0 bg-transparent
         z-100 absolute w-full">
-            <img src={Logo} alt="Logo" className="w-8" />
+            <img src="/assets/shared/logo.svg" alt="Logo" className="w-8" />
             
             <div className="border border-gray-600 grow ml-12 -mr-8 hidden lg:block z-20"></div>
             
             <button className="md:hidden pr-12 z-40"
             onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                { isMenuOpen ? <img src={Close} alt="Close" className="w-7" /> :
-                <img src={MobileMenu} alt="Mobile Menu" className="w-7" /> }
+                { isMenuOpen ? <img src="/assets/shared/icon-close.svg" alt="Close" className="w-7" /> :
+                <img src="/assets/shared/icon-hamburger.svg" alt="Mobile Menu" className="w-7" /> }
             </button>
 
             <ul className="hidden md:flex flex-row gap-8 lg:gap-12 py-8 pr-8 lg:pr-12 pl-26 lg:pl-32 bg-white/10 

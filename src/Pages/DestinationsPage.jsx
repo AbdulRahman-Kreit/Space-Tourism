@@ -4,9 +4,9 @@ import LoadingSpinner from "../Components/LoadingSpinner";
 const Destination = lazy(() => import("../Components/Destination"));
 
 const DestinationsPage = memo(() => {
-    const pageBackground = `bg-[url('../src/assets/destination/background-destination-mobile.jpg')]
-    md:bg-[url('../src/assets/destination/background-destination-tablet.jpg')]
-    lg:bg-[url('../src/assets/destination/background-destination-desktop.jpg')] bg-cover`;
+    const pageBackground = `bg-[url('/assets/destination/background-destination-mobile.jpg')]
+    md:bg-[url('/assets/destination/background-destination-tablet.jpg')]
+    lg:bg-[url('/assets/destination/background-destination-desktop.jpg')] bg-cover`;
 
     return (
         <section className={`${pageBackground} w-full min-h-screen top-0 left-0 pt-40 
